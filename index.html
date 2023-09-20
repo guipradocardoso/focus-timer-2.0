@@ -29,39 +29,37 @@
         <i class="ph-bold ph-sun"></i>
         <i class="ph-bold ph-moon"></i>
       </button>
-      <section id="timer" class="flex">
-        <span id="minutes">00</span>
-        <span>:</span>
-        <span id="seconds">00</span>
-      </section>
-      <section id="controls" class="flex">
-        <button class="ph ph-play-circle">
-          <span class="sr-only">Iniciar contador</span>
-        </button>
-        <button class="ph ph-stop-circle">
-          <span class="sr-only">Pausar contador</span>
-        </button>
-        <button class="ph ph-plus-circle">
-          <span class="sr-only">Aumentar 5 minutos</span>
-        </button>
-        <button class="ph ph-minus-circle">
-          <span class="sr-only">Diminuir 5 minutos</span>
-        </button>
-      </section>
-      <section id="cards">
-        <div class="card">
-          <button id="forest" class="ph ph-tree"></button>
+      <div class="stopwatch">
+        <div id="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
         </div>
-        <div class="card">
+        <div id="controls">
+          <button class="ph ph-play-circle">
+            <span class="sr-only">Iniciar contador</span>
+          </button>
+          <button class="ph ph-stop-circle">
+            <span class="sr-only">Pausar contador</span>
+          </button>
+          <button class="ph ph-plus-circle">
+            <span class="sr-only">Aumentar 5 minutos</span>
+          </button>
+          <button class="ph ph-minus-circle">
+            <span class="sr-only">Diminuir 5 minutos</span>
+          </button>
+        </div>
+      </div>
+      <div class="sounds">
+        <div class="card-1">
+          <button id="forest" class="ph ph-tree"></button>
           <button id="rain" class="ph ph-cloud-snow"></button>
         </div>
-        <div class="card">
+        <div class="card-2">
           <button id="coffee-shop" class="ph ph-storefront"></button>
-        </div>
-        <div class="card">
           <button id="fireplace" class="ph ph-fire"></button>
         </div>
-      </section>
+      </div>
     </div>
   </body>
 </html>

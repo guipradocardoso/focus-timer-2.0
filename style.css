@@ -5,13 +5,13 @@
 }
 
 :root {
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
   --bg-color: hsla(240, 9%, 89%, 1);
   --text-color: hsla(240, 6%, 21%, 1);
-  --bg-forest: hsla(111, 70%, 35%, 1);
-  --bg-rain: hsla(185, 70%, 35%, 1);
-  --bg-coffee-shop: hsla(61, 70%, 35%, 1);
-  --bg-fireplace: hsla(17, 70%, 35%, 1);
-  font-size: clamp(40%, 1% + 2vw, 62.5%);
+  --bg-forest: rgba(46, 152, 27, 0.8);
+  --bg-rain: hsla(185, 70%, 35%, 0.8);
+  --bg-coffee-shop: hsla(61, 70%, 35%, 0.8);
+  --bg-fireplace: hsla(17, 70%, 35%, 0.8);
 }
 
 html.light {
@@ -24,13 +24,33 @@ html:not(.light) .ph-moon {
   display: none;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+#app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 19.2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
 #toggle-mode {
   position: absolute;
-  right: 3.2rem;
   top: 3.2rem;
-  font-size: 3.2rem;
+  right: 3.2rem;
+  font-size: 4.8rem;
   line-height: 0;
   color: var(--text-color);
+  border: 0;
+  background-color: transparent;
 }
 
 .sr-only {
@@ -38,40 +58,32 @@ html:not(.light) .ph-moon {
   height: 1px;
   position: absolute;
   overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  border: 0;
   appearance: none;
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  display: flex;
-  height: 100vh;
-}
-
-#app {
-  margin: 0 23.3rem 0;
+.stopwatch {
+  flex: 1;
+  order: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-}
-.flex {
-  display: flex;
+  align-items: center;
 }
 
 #timer {
+  display: flex;
   font-family: "Roboto Serif", serif;
   font-size: 12.6rem;
   font-weight: 500;
   line-height: 14.8rem;
 }
+
 #controls {
+  display: flex;
   margin-top: 1.7rem;
   gap: 4rem;
 }
+
 #controls > button {
   background-color: transparent;
   border: 0;
@@ -80,24 +92,42 @@ body {
   font-size: 4.8rem;
 }
 
-#cards {
+.sounds {
+  flex: 1;
+  order: 2;
   display: flex;
-  flex-wrap: wrap;
-  width: 30rem;
-}
-.card {
-  padding: 3.2rem;
-
-  flex-basis: 50%;
-  height: 15.2rem;
-  border: 0;
-  border-radius: 2.4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
 }
 
-.card > button {
+.card-1,
+.card-2 {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.sounds * button {
   background-color: transparent;
   cursor: pointer;
   border: 0;
   font-size: 5.6rem;
   color: var(--text-color);
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+}
+
+#forest {
+  background-color: var(--bg-forest);
+}
+#rain {
+  background-color: var(--bg-rain);
+}
+#coffee-shop {
+  background-color: var(--bg-coffee-shop);
+}
+#fireplace {
+  background-color: var(--bg-fireplace);
 }
