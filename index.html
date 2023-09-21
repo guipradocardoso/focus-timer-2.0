@@ -20,7 +20,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/main.js" defer></script>
   </head>
   <body>
     <div id="app">
@@ -29,35 +29,66 @@
         <i class="ph-bold ph-sun"></i>
         <i class="ph-bold ph-moon"></i>
       </button>
+
       <div class="stopwatch">
         <div id="timer">
           <span id="minutes">00</span>
           <span>:</span>
           <span id="seconds">00</span>
         </div>
+
         <div id="controls">
-          <button class="ph ph-play-circle">
+
+          <button data-action="toggleRunning" class="ph ph-play-circle">
             <span class="sr-only">Iniciar contador</span>
           </button>
-          <button class="ph ph-stop-circle">
-            <span class="sr-only">Pausar contador</span>
+
+          <button
+            data-action="toggleRunning"
+            class="ph ph-pause-circle secondary"
+          >
+            <span class="sr-only">Pausar</span>
           </button>
-          <button class="ph ph-plus-circle">
+
+          <button data-action="reset" class="ph ph-stop-circle">
+            <span class="sr-only">Reiniciar contador</span>
+          </button>
+
+          <button data-action="plus" class="ph ph-plus-circle">
             <span class="sr-only">Aumentar 5 minutos</span>
           </button>
-          <button class="ph ph-minus-circle">
+
+          <button data-action="minus" class="ph ph-minus-circle">
             <span class="sr-only">Diminuir 5 minutos</span>
           </button>
+          
         </div>
       </div>
-      <div class="sounds">
+
+      <div class="sounds" id="music">
         <div class="card-1">
-          <button id="forest" class="ph ph-tree"></button>
-          <button id="rain" class="ph ph-cloud-snow"></button>
+          <button
+            data-action="toggleMusicForest"
+            id="forest"
+            class="ph ph-tree"
+          ></button>
+          <button
+            data-action="toggleMusicRain"
+            id="rain"
+            class="ph ph-cloud-snow"
+          ></button>
         </div>
         <div class="card-2">
-          <button id="coffee-shop" class="ph ph-storefront"></button>
-          <button id="fireplace" class="ph ph-fire"></button>
+          <button
+            data-action="toggleMusicCoffee"
+            id="coffee-shop"
+            class="ph ph-storefront"
+          ></button>
+          <button
+            data-action="toggleMusicFireplace"
+            id="fireplace"
+            class="ph ph-fire"
+          ></button>
         </div>
       </div>
     </div>

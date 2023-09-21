@@ -6,8 +6,8 @@
 
 :root {
   font-size: clamp(40%, 1% + 2vw, 62.5%);
-  --bg-color: hsla(240, 9%, 89%, 1);
-  --text-color: hsla(240, 6%, 21%, 1);
+  --bg-color: rgb(7, 9, 20);
+  --text-color: rgb(255, 255, 255);
   --bg-forest: rgba(46, 152, 27, 0.8);
   --bg-rain: hsla(185, 70%, 35%, 0.8);
   --bg-coffee-shop: hsla(61, 70%, 35%, 0.8);
@@ -51,6 +51,7 @@ body {
   color: var(--text-color);
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .sr-only {
@@ -59,6 +60,9 @@ body {
   position: absolute;
   overflow: hidden;
   appearance: none;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
 }
 
 .stopwatch {
@@ -90,6 +94,9 @@ body {
   color: var(--text-color);
   cursor: pointer;
   font-size: 4.8rem;
+}
+#controls .secondary {
+  color: rgb(199, 45, 65);
 }
 
 .sounds {
@@ -130,4 +137,11 @@ body {
 }
 #fireplace {
   background-color: var(--bg-fireplace);
+}
+
+/* controls */
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
 }
