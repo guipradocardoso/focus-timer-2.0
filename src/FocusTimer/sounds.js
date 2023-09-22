@@ -9,7 +9,6 @@ bgForest.loop = true
 bgRain.loop = true
 bgStore.loop = true
 bgFire.loop = true
-<<<<<<< HEAD
 
 export function pauseMusic() {
   bgForest.pause()
@@ -17,5 +16,3 @@ export function pauseMusic() {
   bgStore.pause()
   bgFire.pause()
 }
-=======
->>>>>>> be31ad407594562c19ac751f5c96c22268bee660
