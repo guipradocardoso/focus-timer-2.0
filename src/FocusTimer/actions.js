@@ -37,38 +37,17 @@ export function minus() {
 
 export function toggleMusicForest() {
   state.isMute = document.documentElement.classList.toggle("music-on")
-
-  if (state.isMute) {
-    sounds.pauseMusic()
-    sounds.bgForest.play()
-    return
-  }
-  sounds.bgForest.pause()
+  console.log(toggleMusicForest)
 }
 export function toggleMusicRain() {
   state.isMute = document.documentElement.classList.toggle("music-on")
-  if (state.isMute) {
-    sounds.pauseMusic()
-    sounds.bgRain.play()
-    return
-  }
-  sounds.bgRain.pause()
+  console.log(toggleMusicRain)
 }
 export function toggleMusicCoffee() {
   state.isMute = document.documentElement.classList.toggle("music-on")
-  if (state.isMute) {
-    sounds.pauseMusic()
-    sounds.bgStore.play()
-    return
-  }
-  sounds.bgStore.pause()
+  console.log(toggleMusicCoffee)
 }
 export function toggleMusicFireplace() {
   state.isMute = document.documentElement.classList.toggle("music-on")
-  if (state.isMute) {
-    sounds.pauseMusic()
-    sounds.bgFire.play()
-    return
-  }
-  sounds.bgFire.pause()
+  console.log(toggleMusicFireplace)
 }

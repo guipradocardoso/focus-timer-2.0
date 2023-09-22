@@ -21,3 +21,5 @@ export function registerMusic() {
     actions[action]()
   })
 }
+
+export function setMinutes() {}
